@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DUNKELBLAU Kurz-Audit Cyberangriff</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <script src="/gsap/minified/gsap.min.js"></script>
+    <script src="/gsap/minified/ScrollTrigger.min.js"></script>
+</head>
+
+<body>
+
+    <div class="logo-container">
+        <a href="/">
+            <img src="/images/Logo_Dunkelblau_weiß_transparent.png" alt="Dunkelblau-Wortmarke" class="logo">
+        </a>
+    </div>
+
+    <!-- Burger Menu -->
+    <div class="burger-menu" id="burgerMenu">
+        <div class="burger-bar"></div>
+        <div class="burger-bar"></div>
+        <div class="burger-bar"></div>
+    </div>
+    <nav class="menu" id="menu">
+        <ul>
+            <li><a href="#heroText" data-text="Home">Home</a></li>
+            <li><a href="#audit-section" data-text="Kurz-Audit">Kurz-Audit</a></li>
+            <li><a href="https://dunkelblau.com" target="_blank" rel="noopener noreferrer" data-text="Dunkelblau">Dunkelblau</a></li>
+            <li><a href="#contact" data-text="Kontakt">Kontakt</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero -->
+    <div class="hero">
+        <div class="image-overlay"></div>
+        <div class="hero-content">
+            <h1 id="heroText">You've been hacked!</h1>
+            <div class="additional-texts">
+                <p id="additionalText1">Natürlich haben wir Sie nicht gehacked.</br>Hacken ist nicht unsere Expertise.</p>
+                <p id="additionalText2">Unsere Expertise:</p>
+                <p id="additionalText3"></br>Sie optimal darauf vorzubereiten,</br>falls Sie gehacked werden.</p>
+                <p id="additionalText4"></br>Und Ihnen schnell zu helfen,</br>wenn es schon passiert ist.</p>
+                <p id="additionalText5">Sie können sich vorbereiten.</br>Nutzen Sie Ihre Chance!</p>
+                <p id="additionalText6">Wir unterstützen Sie dabei mit</p>
+                <p id="additionalText7"></br></br>Krisenmanagement, Krisenkommunikation und Strategieberatung.</p>
+                <img id="db-logo" src="/images/Logo_Dunkelblau_weiß_transparent.png" alt="Dunkelblau-Wortmarke">
+            </div>
+        </div>
+        <button id="ctaButton" class="cta-button" style="display: none;">Zum Kurz-Audit</button>
+    </div>
+
+    <!-- Background Image -->
+    <div class="image-section">
+        <div class="image-wrapper">
+            <img src="/images/hintergrund02.jpg" alt="Black and White Image" class="bw-image">
+            <div class="image-overlay"></div>
+        </div>
+    </div>
+
+    <!-- Audit Section -->
+    <div class="audit-section" id="audit-section">
+        <div class="container">        
+            <h2 id="audit-title">Kurz-Audit</h2>
+            <p>Testen Sie hier, ob Sie auf Hackerangriffe vorbereitet sind und im Ernstfall auf sie reagieren können!</p>
+            <div class="slider">
+                <!-- Slide 1 -->
+                <div class="slide" id="slide1">
+                    <div class="row">
+                        <div class="col-md-2 question-number">
+                            <h3>1</h3>
+                        </div>
+                        <div class="col-md-10 question-content">
+                            <p>Wurden in Ihrem Unternehmen die Alarmierungsprozesse im Fall eines Cyberangriffs bereits getestet?</p>
+                            <ul class="options">
+                                <li>
+                                    <label for="q1-option1">
+                                        <input type="radio" id="q1-option1" name="q1" value="Prozesse & Strukturen</br> </br> Sie haben die Alarmierung für einen Cyberangriff getestet. Sie verfügen im Ernstfall über wichtige Erfahrungen und haben Strukturen, Prozesse und Zuständigkeiten schon einmal geprobt." data-score="1">
+                                        <div class="check"></div>Ja
+                                    </label>
+                                </li>
+                                <li>
+                                    <label for="q1-option2">
+                                        <input type="radio" id="q1-option2" name="q1" value="Prozesse & Strukturen</br> </br> Sie haben die Alarmierung nach einem Cyberangriff noch nicht getestet und wissen im Ernstfall nicht, was zu tun ist. Damit verlieren Sie wertvolle Zeit, um Ihre Anspruchsgruppen zu informieren, und verpassen evtl. wichtige Fristen. Dies kann auch der Reputation Ihres Unternehmens schaden." data-score="4">
+                                        <div class="check"></div>Nein
+                                    </label>
+                                </li>
+                                <li>
+                                    <label for="q1-option3">
+                                        <input type="radio" id="q1-option3" name="q1" value="Prozesse & Strukturen</br> </br> Sie haben die Alarmierung nach einem Cyberangriff selbst noch nicht trainiert oder miterlebt, im Ernstfall ist Ihnen nicht klar, was zu tun ist. Evtl. unterlaufen Ihnen dadurch schwerwiegende Fehler, und Sie verlieren wertvolle Zeit. Dies kann auch der Reputation Ihres Unternehmens schaden." data-score="3">
+                                        <div class="check"></div>Weiß ich nicht
+                                    </label>
+                                </li>
+                                <li>
+                                    <label for="q1-option4">
+                                        <input type="radio" id="q1-option4" name="q1" value="Prozesse & Strukturen</br> </br> Bei einem Angriff sind zeitkritische Abläufe und Strukturen möglicherweise veraltet oder unbekannt, Zuständigkeiten können unklar sein. Unsicherheiten prägen die Krisenbewältigung. Evtl. unterlaufen Ihnen dadurch Fehler oder Sie verlieren Zeit. Dies kann auch der Reputation Ihres Unternehmens schaden." data-score="2">
+                                        <div class="check"></div>Ja, aber das ist schon sehr lange her
+                                    </label>
+                                </li>
+                            </ul>
+                            <button type="button" class="next-btn" onclick="nextSlide(1)">Weiter</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide 2 -->
+                <div class="slide" id="slide2">
+                    <div class="row">
+                        <div class="col-md-2 question-number">
+                            <h3>2</h3>
+                        </div>
+                        <div class="col-md-10 question-content">
+                            <p>Wenn bei Ihnen die IT lahmgelegt ist: Wie lange dauert es, bis Ihre Kunden, Lieferanten und Partner merken, dass es ein Problem gibt?</p>
+                            <ul class="options">
+                                <li>
+                                    <label for="q2-option1">
+                                        <input type="radio" id="q2-option1" name="q2" value="Anspruchsgruppen </br> </br> Ihre Kunden merken sofort, dass es ein IT-Problem gibt. Sie müssen umgehend handeln und mit Ihren Anspruchsgruppen kommunizieren. Zudem sind zeitkritische Meldefristen zu beachten." data-score="4">
+                                        <div class="check"></div>Stunden
+                                    </label>
+                                </li>
+                                <li>
+                                    <label for="q2-option2">
+                                        <input type="radio" id="q2-option2" name="q2" value="Anspruchsgruppen </br> </br> Ihre Kunden merken schnell, dass es ein IT-Problem gibt. Sie müssen zeitnah handeln und mit Ihren Anspruchsgruppen kommunizieren. Zudem sind zeitkritische Meldefristen zu beachten." data-score="3">
+                                        <div class="check"></div>Tage
+                                    </label>
+                                </li>
+                                <li>
+                                    <label for="q2-option3">
+                                        <input type="radio" id="q2-option3" name="q2" value="Anspruchsgruppen </br> </br> Ihre Kunden merken erst nach einer oder mehreren Wochen, dass es ein IT-Problem gibt. Dennoch sind zeitkritische Meldefristen zu beachten. Die Kundeninformation kann mit etwas mehr zeitlichen Ressourcen vorbereitet werden." data-score="2">
+                                        <div class="check"></div>Wochen
+                                    </label>
+                                </li>
+                                <li>
+                                    <label for="q2-option4">
+                                        <input type="radio" id="q2-option4" name="q2" value="Anspruchsgruppen </br> </br> Ihre Kunden merken erst spät, dass es ein IT-Problem gibt. Dennoch sind zeitkritische Meldefristen zu beachten. Die Kundeninformation kann mit ausreichend zeitlichen Ressourcen vorbereitet werden." data-score="1">
+                                        <div class="check"></div>Monate
+                                    </label>
+                                </li>
+                            </ul>
+                            <button type="button" class="back-btn" onclick="prevSlide(2)">Zurück</button>
+                            <button type="button" class="next-btn" onclick="nextSlide(2)">Weiter</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide 3 -->
+                <div class="slide" id="slide3">
+                    <div class="row">
+                        <div class="col-md-2 question-number">
+                            <h3>3</h3>
+                        </div>
+                        <div class="col-md-10 question-content">
+                            <p>Verfügt Ihr Unternehmen über verlässliche Partner in den Bereichen Krisenkommunikation, Krisenmanagement, Incident Response und Datenschutz?</p>
+                            <ul class="options">
+                                <li>
+                                    <label for="q3-option1">
+                                        <input type="radio" id="q3-option1" name="q3" value="Netzwerk </br> </br> Sie verfügen über verlässliche Partner in den bei Cyberangriffen wichtigen Bereichen. Sie können schnell auf Hilfe zurückgreifen und Schäden minimieren." data-score="1">
+                                        <div class="check"></div>Ja
+                                    </label>
+                                </li>
+                                <li>
+                                    <label for="q3-option2">
+                                        <input type="radio" id="q3-option2" name="q3" value="Netzwerk </br> </br> Sie verfügen noch nicht über gute Partner, die Ihnen bei einem Cyberangriff zur Seite stehen. Dadurch verlieren Sie Zeit, wenn Sie diese in der Krise erst suchen müssen und Sie noch kein eingespieltes Team haben. Sie sollten Partner für alle Bereiche auf Ihrer Notfallliste haben, die Sie schnell kontaktieren können, um gemeinsame Abläufe und Strukturen zu etablieren. Nur so erhalten Sie im Krisenfall zeitnah umfassende fachliche Unterstützung." data-score="4">
+                                        <div class="check"></div>Nein
+                                    </label>
+                                </li>
+                                <li>
+                                    <label for="q3-option3">
+                                        <input type="radio" id="q3-option3" name="q3" value="Netzwerk </br> </br> Sie sollten prüfen, ob Sie über verlässliche Partner in den bei Cyberangriffen wichtigen Bereichen verfügen. Andernfalls könnten Sie Zeit verlieren, wenn Sie diese erst in der Krise suchen müssen." data-score="3">
+                                        <div class="check"></div>Weiß ich nicht
+                                    </label>
+                                </li>
+                                <li>
+                                    <label for="q3-option4">
+                                        <input type="radio" id="q3-option4" name="q3" value="Netzwerk </br> </br> Sie sollten Partner für alle Bereiche auf Ihrer Notfallliste haben, die Sie schnell kontaktieren können, um gemeinsame Abläufe und Strukturen zu etablieren. Nur so erhalten Sie im Krisenfall zeitnah umfassende fachliche Unterstützung." data-score="2">
+                                        <div class="check"></div>Ein paar, aber nicht in allen Bereichen
+                                    </label>
+                                </li>
+                            </ul>
+                            <button type="button" class="back-btn" onclick="prevSlide(3)">Zurück</button>
+                            <button type="button" class="next-btn" onclick="nextSlide(3)">Weiter</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide 4 -->
+                <div class="slide" id="slide4">
+                    <div class="row">
+                        <div class="col-md-2 question-number">
+                            <h3>4</h3>
+                        </div>
+                        <div class="col-md-10 question-content">
+                            <p>Verfügt Ihr Unternehmen über aktuelle Kommunikationsvorlagen für einen Cyberangriff?</p>
+                            <ul class="options">
+                                <li>
+                                    <label for="q4-option1">
+                                        <input type="radio" id="q4-option1" name="q4" value="Kommunikation </br> </br> Sie können bei einem Cyberangriff auf eine vorab festgelegte Kommunikationsstrategie und Kommunikationsvorlagen zurückgreifen und so schnell und transparent an Ihre unterschiedlichen Anspruchsgruppen kommunizieren. So können Sie Vertrauen (zurück-)gewinnen und die Reputation Ihres Unternehmens schützen." data-score="1">
+                                        <div class="check"></div>Ja
+                                    </label>
+                                </li>
+                                <li>
+                                    <label for="q4-option2">
+                                        <input type="radio" id="q4-option2" name="q4" value="Kommunikation </br> </br> Bei einem Cyberangriff stehen Ihnen keine vorab festgelegte Kommunikationsstrategie und/oder Kommunikationsvorlagen zur Verfügung. Diese zu erstellen, benötigt Zeit und personelle Ressourcen, wovon Sie im Ernstfall nur wenig zur Verfügung haben." data-score="4">
+                                        <div class="check"></div>Nein
+                                    </label>
+                                </li>
+                                <li>
+                                    <label for="q4-option3">
+                                        <input type="radio" id="q4-option3" name="q4" value="Kommunikation </br> </br> Sie sollten prüfen, ob Sie auf eine vorab festgelegte Kommunikationsstrategie und/oder Kommunikationsvorlagen zurückgreifen können, und ob diese aktuell und vollständig sind. Mit guter Vorarbeit sparen Sie in der Krise personelle Ressourcen und können auch unter Zeitdruck strukturiert handeln." data-score="3">
+                                        <div class="check"></div>Weiß ich nicht
+                                    </label>
+                                </li>
+                                <li>
+                                    <label for="q4-option4">
+                                        <input type="radio" id="q4-option4" name="q4" value="Kommunikation </br> </br> Ihre Kommunikationsstrategie und/oder Kommunikationsvorlagen sind nicht vollständig und helfen Ihnen bei einem Cyberangriff möglicherweise nicht weiter. Mit guter Vorarbeit sparen Sie in der Krise personelle Ressourcen und können auch unter Zeitdruck strukturiert handeln." data-score="2">
+                                        <div class="check"></div>Ja, aber sie sind nicht aktuell
+                                    </label>
+                                </li>
+                            </ul>
+                            <button type="button" class="back-btn" onclick="prevSlide(4)">Zurück</button>
+                            <button type="button" class="next-btn" onclick="nextSlide(4)">Zum Ergebnis</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="slide" id="slide5" style="display: none;">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-6"></div>
+                            <div class="col-md-6">
+                                <div id="cta1" class="cta-button" style="display: none;">Glückwunsch! </br> Ihr Unternehmen/Ihre Abteilung scheint für den Fall eines Cyberangriffs gut vorbereitet zu sein. Halten Sie Ihre Alarmierungsprozesse, Kommunikationspläne, Kontakt- und Checklisten etc. dennoch weiterhin aktuell und vollständig. Sollten Sie dabei Unterstützung benötigen oder einen Blick von außen wünschen, helfen wir Ihnen gerne. </br> <a href="https://dunkelblau.com/kontakt/" target="_blank" rel="noopener noreferrer">Kontaktieren Sie uns für ein kostenloses Erstgespräch hier.</a></div>
+                                <div id="cta2" class="cta-button" style="display: none;">Achtung! </br> Ihre Antworten lassen vermuten, dass Ihr Unternehmen/Ihre Abteilung noch nicht optimal auf einen Cyberangriff vorbereitet ist. Wir helfen Ihnen gerne dabei, sich in den Bereichen Alarmierungsprozesse, Kommunikationspläne, Kontakt- und Checklisten etc. besser vorzubereiten und geeignete präventive Maßnahmen zu treffen.</br><a href="https://dunkelblau.com/kontakt/" target="_blank" rel="noopener noreferrer">Kontaktieren Sie uns hier für ein kostenloses Erstgespräch.</a></div>
+                                <div id="cta3" class="cta-button" style="display: none;">Vorsicht! </br> Ihre Antworten lassen vermuten, dass Ihr Unternehmen/Ihre Abteilung nicht auf einen Cyberangriff vorbereitet ist. Das Risiko, nicht angemessen reagieren zu können, ist hoch. Um nicht unvorbereitet getroffen zu werden und womöglich hohen wirtschaftlichen Schaden zu nehmen oder Reputationsverlust zu erleiden, empfehlen wir Ihnen, sich auf dieses Szenario vorzubereiten. Gerne unterstützen wir Sie dabei. </br><a href="https://dunkelblau.com/kontakt/" target="_blank" rel="noopener noreferrer">Kontaktieren Sie uns hier für ein kostenloses Erstgespräch.</a></div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <h3>Übersicht</h3>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div id="answer1" class="summary-card">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div id="answer2" class="summary-card">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div id="answer3" class="summary-card">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div id="answer4" class="summary-card">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <h5>Ihre Punktzahl: <span id="score"></span> von 16</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Background image -->
+    <div class="image-section">
+        <div class="image-wrapper">
+            <img src="/images/hintergrund03.jpg" alt="Black and White Image" class="bw-image">
+            <div class="image-overlay"></div>
+        </div>
+    </div>
+
+    <!-- Contact Section -->
+    <div class="contact-section" id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 contact-image">
+                    <img src="/images/Logo_Dunkelblau_weiß_transparent.png" alt="Contact Image">
+                </div>
+                <div class="col-md-3 contact-info">
+                    <h2>&nbsp;</h2>
+                </div>
+                <div class="col-md-5 contact-info">
+                    <h2>Kontakt</h2> <!-- Added heading for context -->
+                    <p>M: <a href= "#" id="email-link">mail@dunkelblau.com</a></p>
+                    <p>T: +49 (0) 341 - 339 784 00</p>
+                    <p>A: Erich-Zeigner-Alle 69-73, 04229 Leipzig</p>
+                    <p>W: <a href="https://www.dunkelblau.com">www.dunkelblau.com</a></p>
+                </div>
+                <div class="col-md-1 contact-info slim-col" linkedin>
+                    <a href="https://de.linkedin.com/company/dunkelblau">
+                        <img src="/icons/In-White-26.png" alt="LinkedIn">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Separator -->
+    <div class="thin-white-line"></div>
+
+    <!-- Privacy Notice-->
+    <div class="legal" id="legal">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <p>© 2024 Dunkelblau GmbH & Co. KG</p>
+                </div>
+                <div class="col-md-8 d-flex justify-content-end">
+                    <div class="col-md-3">
+                        <p><a href="https://dunkelblau.com/kontakt/">Kontakt</a></p>
+                    </div>
+                    <div class="col-md-3">
+                        <p><a href="https://dunkelblau.com/impressum/">Impressum</a></p>
+                    </div>
+                    <div class="col-md-3">
+                        <p><a href="https://dunkelblau.com/datenschutz/">Datenschutz</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- JS-Script -->
+    <script src="/bootstrap/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
+    
+</body>
+</html>
