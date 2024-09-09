@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', function() {
             scrollTrigger: {
                 trigger: ".hero",
                 start: "top top",
-                end: "+=7000px",
+                end: "+=5500px",
                 scrub: true,
                 pin: ".hero",
                 anticipatePin: 1
@@ -26,18 +26,11 @@ document.addEventListener('DOMContentLoaded', function() {
         .from("#additionalText2", { opacity: 0, y: 50, duration: 30 }) // Text 2 appears after Text 1 disappears
         .from("#additionalText3", { opacity: 0, y: 50, duration: 30 }) // Text 3 appears
         .to("#additionalText3", { opacity: 0, y: -50, duration: 10, delay: 30 }) // Text 3 disappears
-        .from("#additionalText4", { opacity: 0, y: 50, duration: 30 }) // Text 4 appears
-        .to("#additionalText4", { opacity: 0, y: -50, duration: 10, delay: 30 }) // Text 4 disappears
         .to("#additionalText2", { opacity: 0, y: -50, duration: 10 }) // Text 2 disappears
         .to("#heroText", { opacity: 0, y: -50, duration: 10 }) // heroText disappears
-        .from("#additionalText5", { opacity: 0, y: 50, duration: 30 }) // Text 5 appears
-        .to("#additionalText5", { opacity: 0, y: -50, duration: 10, delay: 30 }) // Text 5 disappears
-        .from("#additionalText6", { opacity: 0, y: 50, duration: 30 }) // Text 6 appears
-        .from("#additionalText7", { opacity: 0, y: 50, duration: 30 }) // Text 7 appears
-        .to("#additionalText6", { opacity: 0, y: -50, duration: 10, delay: 30 }) // Text 6 disappears
-        .to("#additionalText7", { opacity: 0, y: -50, duration: 10 }) // Text 7 disappears
+        .from("#additionalText4", { opacity: 0, y: 50, duration: 30 }) // Text 4 appears
+        .to("#additionalText4", { opacity: 0, y: -50, duration: 10, delay: 30 }) // Text 4 disappears
 
-    
         //Add DB-Logo to timeline
         .from("#db-logo", { opacity: 0, y: 50, duration: 30 }) // Logo appears
 
