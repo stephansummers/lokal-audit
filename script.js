@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', function() {
             scrollTrigger: {
                 trigger: ".hero",
                 start: "top top",
-                end: "+=5500px",
+                end: "+=4800px",
                 scrub: true,
                 pin: ".hero",
                 anticipatePin: 1
