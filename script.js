@@ -20,19 +20,19 @@ document.addEventListener('DOMContentLoaded', function() {
         });
 
         // Sequentially animate texts
-        tl.from("#heroText", { opacity: 0, y: 50, duration: 30, delay: 20 }) // Hero Text appears
-            .from("#additionalText1", { opacity: 0, y: 50, duration: 30, delay: 20 }) // Text 1 appears
+        tl.from("#heroText", { opacity: 0, y: 50, duration: 30, delay: 25 }) // Hero Text appears
+            .from("#additionalText1", { opacity: 0, y: 50, duration: 30, delay: 25 }) // Text 1 appears
             .to("#additionalText1", { opacity: 0, y: -50, duration: 30 }) // Text 1 disappears
-            .from("#additionalText2", { opacity: 0, y: 50, duration: 30, delay: 20 }) // Text 2 appears after Text 1 disappears
-            .from("#additionalText3", { opacity: 0, y: 50, duration: 30, delay: 20 }) // Text 3 appears
-            .to("#additionalText3", { opacity: 0, y: -50, duration: 30, delay: 30 }) // Text 3 disappears
+            .from("#additionalText2", { opacity: 0, y: 50, duration: 30, delay: 25 }) // Text 2 appears after Text 1 disappears
+            .from("#additionalText3", { opacity: 0, y: 50, duration: 30, delay: 25 }) // Text 3 appears
+            .to("#additionalText3", { opacity: 0, y: -50, duration: 30, delay: 25 }) // Text 3 disappears
             .to("#additionalText2", { opacity: 0, y: -50, duration: 30 }) // Text 2 disappears
             .to("#heroText", { opacity: 0, y: -50, duration: 10 }) // heroText disappears
     
             // Show additionalText4 and CTA button at the same time
             .from("#additionalText4", { opacity: 0, y: 50, duration: 30 }) // Text 4 appears
             .to("#ctaButton", { display: 'block', opacity: 1, y: 0, duration: 30 }, "<") // CTA button appears at the same time as Text 4
-            .to("#additionalText4", { opacity: 0, y: -50, duration: 10, delay: 30 }) // Text 4 disappears
+            .to("#additionalText4", { opacity: 0, y: -50, duration: 10, delay: 25 }) // Text 4 disappears
     
             // Show DB logo after everything else
             .from("#db-logo", { opacity: 0, y: 50, duration: 30 }); // Logo appears last
