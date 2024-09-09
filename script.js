@@ -20,8 +20,8 @@ document.addEventListener('DOMContentLoaded', function() {
         });
 
         tl.from("#heroText", { opacity: 0, y: 50, duration: 30, delay: 30 }) // Hero Text appears
-            .from("#additionalText1", { opacity: 0, y: 50, duration: 30, delay: 30 }) // Text 1 appears
-            .to("#additionalText1", { opacity: 0, y: -50, duration: 10, delay: 30 }) // Text 1 disappears
+            .from("#additionalText1", { opacity: 0, y: 50, duration: 30 }) // Text 1 appears
+            .to("#additionalText1", { opacity: 0, y: -50, duration: 10 }) // Text 1 disappears
             .from("#additionalText2", { opacity: 0, y: 50, duration: 30 }) // Text 2 appears after Text 1 disappears
             .from("#additionalText3", { opacity: 0, y: 50, duration: 30 }) // Text 3 appears
             .to("#additionalText3", { opacity: 0, y: -50, duration: 10, delay: 30 }) // Text 3 disappears
